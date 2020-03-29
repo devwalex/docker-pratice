@@ -6,4 +6,4 @@ before_install:
   - docker build -t devwalex/docker-practice -f Dockerfile.dev .
 
 script:
-  - docker run devwalex/docker-practice npm run test -- --coverage
+  - docker run -e CI=true devwalex/docker-practice npm run test -- --coverage
